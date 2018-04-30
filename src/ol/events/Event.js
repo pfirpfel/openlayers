@@ -12,7 +12,6 @@
  * {@link module:ol/events/EventTarget~EventTarget}.
  *
  * @constructor
- * @implements {oli.events.Event}
  * @param {string} type Type.
  */
 const Event = function(type) {
@@ -20,21 +19,21 @@ const Event = function(type) {
   /**
    * @type {boolean}
    */
-  this.propagationStopped;
+  this['propagationStopped'];
 
   /**
    * The event type.
    * @type {string}
    * @api
    */
-  this.type = type;
+  this['type'] = type;
 
   /**
    * The event target.
    * @type {Object}
    * @api
    */
-  this.target = null;
+  this['target'] = null;
 
 };
 
@@ -45,7 +44,7 @@ const Event = function(type) {
  * @override
  * @api
  */
-Event.prototype.preventDefault =
+Event.prototype['preventDefault'] =
 
   /**
    * Stop event propagation.
@@ -53,8 +52,8 @@ Event.prototype.preventDefault =
    * @override
    * @api
    */
-  Event.prototype.stopPropagation = function() {
-    this.propagationStopped = true;
+  Event.prototype['stopPropagation'] = function() {
+    this['propagationStopped'] = true;
   };
 
 
@@ -62,7 +61,7 @@ Event.prototype.preventDefault =
  * @param {Event|module:ol/events/Event} evt Event
  */
 export function stopPropagation(evt) {
-  evt.stopPropagation();
+  evt['stopPropagation']();
 }
 
 
@@ -70,7 +69,7 @@ export function stopPropagation(evt) {
  * @param {Event|module:ol/events/Event} evt Event
  */
 export function preventDefault(evt) {
-  evt.preventDefault();
+  evt['preventDefault']();
 }
 
 export default Event;

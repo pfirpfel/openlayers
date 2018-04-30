@@ -12,34 +12,6 @@ let oli;
 /**
  * @interface
  */
-oli.events.Event = function() {};
-
-
-/**
- * @type {Object}
- */
-oli.events.Event.prototype.target;
-
-
-/**
- * @type {string}
- */
-oli.events.Event.prototype.type;
-
-
-/**
- */
-oli.events.Event.prototype.preventDefault = function() {};
-
-
-/**
- */
-oli.events.Event.prototype.stopPropagation = function() {};
-
-
-/**
- * @interface
- */
 oli.Collection.Event = function() {};
 
 
