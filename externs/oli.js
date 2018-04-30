@@ -12,18 +12,6 @@ let oli;
 /**
  * @interface
  */
-oli.AssertionError = function() {};
-
-
-/**
- * @type {number}
- */
-oli.AssertionError.prototype.code;
-
-
-/**
- * @interface
- */
 oli.events.Event = function() {};
 
 

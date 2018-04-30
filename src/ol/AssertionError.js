@@ -4,12 +4,17 @@
 import {VERSION, inherits} from './index.js';
 
 /**
+ * @interface AssertionErrorInterface
+ * @property {number} code
+ */
+
+/**
  * Error object thrown when an assertion failed. This is an ECMA-262 Error,
  * extended with a `code` property.
  * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error}
  * @constructor
  * @extends {Error}
- * @implements {oli.AssertionError}
+ * @implements {module:ol/AssertionError~AssertionErrorInterface}
  * @param {number} code Error code.
  */
 const AssertionError = function(code) {
